@@ -14,12 +14,11 @@ RUN apt-get update && apt-get install -yq \
     git make g++ nodejs python libavahi-compat-libdnssd-dev npm && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
-RUN npm install -g airsonos
-
 # Defines our working directory in container
 
 WORKDIR /root/
-
+COPY airupnp-arm ./
+RUN chmod -x airupnp-arm
 
 # server.js will run when container starts up on the device
-CMD ["airsonos"]
+CMD ["./airupnp-arm"]
