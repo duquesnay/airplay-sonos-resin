@@ -1,2 +1,4 @@
 FROM balenalib/raspberry-pi2-ubuntu
+COPY mnt-storage.mount /etc/systemd/system/
+RUN systemctl enable mnt-storage.mount
 

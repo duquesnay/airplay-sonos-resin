@@ -1,0 +1,12 @@
+[Unit]
+Description = External SD Card
+
+[Mount]
+What = LABEL=mysdcard
+Where = /mnt/storage
+Type = fat32
+Options = rw,relatime,data=ordered
+
+[Install]
+WantedBy = multi-user.target
+
