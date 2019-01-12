@@ -1,4 +1,4 @@
-FROM balenalib/raspberry-pi2-debian
+FROM balenalib/raspberrypi3-debian
 
 # Install Systemd
 ENV container docker
